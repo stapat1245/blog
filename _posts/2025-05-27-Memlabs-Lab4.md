@@ -20,6 +20,7 @@ challenge file - [file](https://mega.nz/#!Tx41jC5K!ifdu9DUair0sHncj5QWImJovfxixc
 # Solution
 - we have the memory dump , first getting its profile and seeing what processes where running
 
+
 ```bash
 stapat@stapat:~/ehax/dfir/memlabs/lab4$ volatility -f chall.raw imageinfo
 Volatility Foundation Volatility Framework 2.6.1
