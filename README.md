@@ -1,3 +1,2 @@
-## EHAX Blog
+## my writeup mania
 
-Blog of ehax

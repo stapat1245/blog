@@ -604,6 +604,8 @@ Last modified: 2019-06-29 12:59:43 UTC+0000
 Last accessed: 2019-06-29 07:29:43 UTC+0000
 File Offset: 0x100, Data Offset: 0x0, Data Length: 0x0
 ```
+
+
 - we can see , ```Important.txt``` , ```screenshot.png``` and one or two other images 
 - using filescan to get the offset and extracting the files with dumpfiles ```volatility -f chall.raw --profile=Win7SP1x64 dumpfiles -Q (offset) -D (directory)```
 
