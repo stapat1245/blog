@@ -9,6 +9,7 @@ author: stapat
 # Memlabs lab 4
 
 challenge description
+
 ```
 My system was recently compromised. The Hacker stole a lot of information but he also deleted a very important file of mine. I have no idea on how to recover it. The only evidence we have, at this point of time is this memory dump. Please help me.
 
@@ -16,10 +17,12 @@ Note: This challenge is composed of only 1 flag.
 
 The flag format for this lab is: inctf{s0me_l33t_Str1ng}
 ```
+
 challenge file - [file](https://mega.nz/#!Tx41jC5K!ifdu9DUair0sHncj5QWImJovfxixcAY-gt72mCXmYrE)
 
 # Solution
 - we have the memory dump , first getting its profile and seeing what processes where running
+
 
 
 ```bash
@@ -87,10 +90,15 @@ Offset(P)          Name                    PID pslist psscan thrdproc pspcid csr
 0x000000003ea94630 csrss.exe              2672 False  True   False    False  False False   False    2019-06-29 07:29:59 UTC+0000
 0x000000003fc5ab30 dllhost.exe            2572 False  True   False    False  False False   False    2019-06-29 07:30:07 UTC+0000
 ```
+
+
 - we can see only one eye catching process which is StikyNot.exe , this is not a known application , probably a malware so lets just ignore it for now
 
 - looking for some files as the description mentioned deletion of files , it reminds me on internet explorer history ( not tho , read from a writeup 😭)
 - checking the filescan and ie history for files opened ( for .txt, .jpg , .png etc)
+
+
+
 ```bash
 stapat@stapat:~/ehax/dfir/memlabs/lab4$ volatility -f chall.raw --profile=Win7SP1x64 iehistory
 Volatility Foundation Volatility Framework 2.6.1
