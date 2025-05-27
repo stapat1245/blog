@@ -242,18 +242,13 @@ and the evilscript.py
 ```python
 import sys
 import string
-
 def xor(s):
 
 	a = ''.join(chr(ord(i)^3) for i in s)
 	return a
-
-
 def encoder(x):
 	
 	return x.encode("base64")
-
-
 if __name__ == "__main__":
 
 	f = open("C:\\Users\\hello\\Desktop\\vip.txt", "w")
@@ -266,7 +261,9 @@ if __name__ == "__main__":
 
 	f.close()
 ```
+
 - we can see that that it first xored it and then base64'd it
+
 ```python
 import base64
 
@@ -275,8 +272,10 @@ xor=base64.b64decode(txt).decode()
 flag =''.join(chr(ord(i)^3) for i in xor)
 print(flag)
 ```
+
 - output =```inctf{0n3_h4lf```
-- now for the second part we need a image so scanning all the images present in the memory dump , we need only jpgs as steghide only works on jpgs , but we scan for all if we want to have a deeper look
+- now for the second part we need a image so scanning all the images present in the memory dump , we need only jpgs as steghide only works on jpgs , but we scan for all if we want to have a deeper look.
+
 ```bash
 stapat@stapat:~/ehax/dfir/memlabs/lab3$ volatility -f chall.raw --profile=Win7SP1x86 filescan | grep ".jpeg"
 Volatility Foundation Volatility Framework 2.6.1
@@ -313,4 +312,5 @@ stapat@stapat:~/ehax/dfir/memlabs/lab3$ ls
 stapat@stapat:~/ehax/dfir/memlabs/lab3$ cat secret\ text 
 _1s_n0t_3n0ugh}
 ```
+
 - the full flag is ```inctf{0n3_h4lf_1s_n0t_3n0ugh}```
