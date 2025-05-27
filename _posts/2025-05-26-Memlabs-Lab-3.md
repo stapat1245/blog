@@ -294,7 +294,7 @@ stapat@stapat:~/ehax/dfir/memlabs/lab3$ ls
 chall.raw  evilscript.py  README.md  rev.py  suspision.jpeg  vip.txt
 stapat@stapat:~/ehax/dfir/memlabs/lab3$ xdg-open suspision.jpeg 
 ```
-![suspision.jpeg](../assets/img/memlabs/lab3/suspision.jpeg)
+![suspision.jpeg](https://raw.githubusercontent.com/stapat1245/memlabs/refs/heads/main/lab3/resources/suspision.jpeg)
 - using steghide(as suggested in question with passphrase the half flag)
 
 ```bash

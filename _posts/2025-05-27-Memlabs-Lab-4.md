@@ -620,7 +620,7 @@ File Offset: 0x100, Data Offset: 0x0, Data Length: 0x0
 - using filescan to get the offset and extracting the files with dumpfiles ```volatility -f chall.raw --profile=Win7SP1x64 dumpfiles -Q (offset) -D (directory)```
 
 Screenshot1.png
-![screenshot](../assets/img/memlabs/lab4/ss.png)
+![screenshot](https://raw.githubusercontent.com/stapat1245/memlabs/refs/heads/main/lab4/resources/ss.png)
 
 - we didnt get anything useful but we dumpfiles coudnt extract Important.txt , so this was the deleted file the description was talking about
 - now after reading some writeups and articles i got to know that , every ntfs file system has a mft table , every file on ntfs systmem has a entry in the mft table which includes , timestamps and all the information about the file 
@@ -630,7 +630,7 @@ Screenshot1.png
 volatility -f chall.raw --profile=Win7SP1x64 mftparser > mft.txt
 ```
 - now if we search for the Important.txt in mft.txt we get the flag
-![screenshot](../assets/img/memlabs/lab4/image.png)
+![screenshot](https://raw.githubusercontent.com/stapat1245/memlabs/refs/heads/main/lab4/resources/image.png)
 
 # flag
 ```

@@ -5,7 +5,7 @@ tags: [memlabs]     # TAG names should always be lowercase
 author: stapat
 ---
 
-# lab 1
+# Lab 1
 ### challenge description
 ```
 My sister’s computer crashed. We were very fortunate to recover this memory dump. Your job is get all her important files from the system. From what we remember, we suddenly saw a black window pop up with some thing being executed. When the crash happened, she was trying to draw something. Thats all we remember from the time of crash.
@@ -162,15 +162,15 @@ stapat@stapat:~/ehax/dfir/lab1/mspaint$ file 2424.dmp
 ```
 making the data file .data and opening it with gimp gives us something , after 2-3 hours of adjusting its height and width ( at the end seeing another writeup) we get the flag flipped , so flipping it gives us the flag.
 ```height= ~10000 width= ~1250```
-![flippedflag](../assets/img/memlabs/lab1//image.png)
-![flag](../assets/img/memlabs/lab1/flag2.png)
+![flippedflag](https://raw.githubusercontent.com/stapat1245/memlabs/refs/heads/main/lab1/resources/image.png)
+![flag](https://raw.githubusercontent.com/stapat1245/memlabs/refs/heads/main/lab1/resources/flag2.png)
 
 ```
 flag 2 = flag{Good_Boy_good_girl}
 ```
 ### flag 3
 we have the winrar.exe process and we got the Important.rar opened in the cmdline output
-![cmdline](../assets/img/memlabs/lab1/cmdline.png)
+![cmdline](https://raw.githubusercontent.com/stapat1245/memlabs/refs/heads/main/lab1/resources/cmdline.png)
 extracting the file with dumpfiles plugin
 but we need to have the physical offset for this 
 so for physical offset in the memory dump we use the filescan plugin
@@ -237,7 +237,7 @@ Extracting  flag3.png                                                 OK
 All OK
 ```
 we got the flag 3 as well
-![flag3](../assets/img/memlabs/lab1/flag3.png)
+![flag3](https://raw.githubusercontent.com/stapat1245/memlabs/refs/heads/main/lab1/resources/flag3.png)
 
 ## Flags
 ```
