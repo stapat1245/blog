@@ -1,6 +1,6 @@
 ---
 title: Memlabs Lab 1 Writeup
-date: 2025-05-26 12:00:00 +/-TTTT
+date: 2025-05-24 12:00:00 +/-TTTT
 tags: [memlabs]     # TAG names should always be lowercase
 author: stapat
 ---
