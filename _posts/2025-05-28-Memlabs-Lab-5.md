@@ -791,4 +791,4 @@ flag{!!_w3LL_d0n3_St4g3-1_0f_L4B_3_D0n3_!!}
 
 - using this(flag{!!_w3LL_d0n3_St4g3-1_0f_L4B_5_D0n3_!!}) as password to unrar the zip we get
 
-![flag](resources/Stage2.png)
+![flag](https://raw.githubusercontent.com/stapat1245/memlabs/refs/heads/main/lab5/resources/Stage2.png)
