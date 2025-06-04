@@ -19,5 +19,5 @@ More to come
 - Website: [https://stapat.tech](https://ehax.tech/)
 - CTF Time: [https://ctftime.org/team/270643](https://ctftime.org/team/270643)
 - Github: [https://github.com/stapat1245/](https://github.com/stapat1245/)
-- Linkedin: [https://www.linkedin.com/stavya1245](https://www.linkedin.com/stavya1245)
+- Linkedin: [https://www.linkedin.com/in/stavya1245/](https://www.linkedin.com/in/stavya1245/)
 
