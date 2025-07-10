@@ -204,6 +204,8 @@ Offset(V)     Pid     Handle     Access Type             Details
 ## task 5
 - for this we can use a simple plugin malfind and analyze headers of the files usually the headers of windows executables start from "MZ"
 - so in this we count the number of MZ
+
+
 ```bash
 stapat@stapat:~/ehax/thm/dfir$ volatility -f Investigation-1.vmem --profile=WinXPSP2x86 malfind
 Volatility Foundation Volatility Framework 2.6.1
@@ -745,7 +747,9 @@ Volatility Foundation Volatility Framework 2.6.1
 
 - now this has new memory dump 
 - getting the basic info about the dump
-```
+
+
+```bash
 stapat@stapat:~/ehax/thm/dfir$ volatility -f Investigation-2.raw imageinfo
 Volatility Foundation Volatility Framework 2.6.1
 INFO    : volatility.debug    : Determining profile based on KDBG search...
@@ -786,8 +790,11 @@ Offset(V)  Name                    PID   PPID   Thds     Hnds   Sess  Wow64 Star
 0x82010020 alg.exe                 544    664      6      101      0      0 2017-05-12 21:22:55 UTC+0000                                 
 0x81fea8a0 wscntfy.exe            1168   1024      1       37      0      0 2017-05-12 21:22:56 UTC+0000
 ```
+
 - we get the answer of the first question and the third question and the (@WannaDecryptor@ & tasksche.exe)
 - we can get the 2nd answer with cmdline
+
+
 ```bash
 stapat@stapat:~/ehax/thm/dfir$ volatility -f Investigation-2.raw --profile=WinXPSP2x86 cmdline
 Volatility Foundation Volatility Framework 2.6.1
@@ -852,6 +859,8 @@ wscntfy.exe pid:   1168
 Command line : C:\WINDOWS\system32\wscntfy.exe
 ```
 - okay so we did not got this time , we can use dlllist plugin for more info
+
+
 ```bash
 stapat@stapat:~/ehax/thm/dfir$ volatility -f Investigation-2.raw --profile=WinXPSP2x86 dlllist -p 740
 Volatility Foundation Volatility Framework 2.6.1
@@ -895,6 +904,7 @@ Base             Size  LoadCount LoadTime                       Path
 0x769c0000    0xb4000        0x1                                C:\WINDOWS\system32\USERENV.dll
 0x00ea0000    0x29000        0x1                                C:\WINDOWS\system32\msls31.dll
 ```
+
 - now we got our answer ```C:\Intel\ivecuqmanpnirkt615\@WanaDecryptor@.exe``` 
 - and just from google search we got the answer to the second last question - wannacry 
 - last answer is windows.filescan(WHO TF USES WINDOWS. , AVERAGE VOLATILITY 3 L)
