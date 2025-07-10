@@ -58,6 +58,7 @@ Offset(V)  Name                    PID   PPID   Thds     Hnds   Sess  Wow64 Star
 ```
 - we can see the ```reader_sl.exe``` which is the adobe reader(i got to know this too lmao) its PID and PPID(parent process ID) is given which is 1640 and PPID=1484
 - for the path we use cmdline 
+
 ```bash
 stapat@stapat:~/ehax/thm/dfir$ volatility -f Investigation-1.vmem --profile=WinXPSP2x86 cmdline
 Volatility Foundation Volatility Framework 2.6.1
@@ -115,6 +116,7 @@ Command line : "C:\WINDOWS\system32\wuauclt.exe"
 - ```C:\Program Files\Adobe\Reader 9.0\Reader\Reader_sl.exe``` this is the full path
 
 -  for the next question we use the the dlllist plugin
+
 ```bash
 stapat@stapat:~/ehax/thm/dfir$ volatility -f Investigation-1.vmem --profile=WinXPSP2x86 dlllist -p 1640
 Volatility Foundation Volatility Framework 2.6.1
@@ -151,6 +153,7 @@ Base             Size  LoadCount LoadTime                       Path
 0x773d0000   0x103000        0x1                                C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll
 ```
 - for the next keyed events we can use handles plugins with the PID
+
 ```bash
 stapat@stapat:~/ehax/thm/dfir$ volatility -f Investigation-1.vmem --profile=WinXPSP2x86 handles -p 1640
 Volatility Foundation Volatility Framework 2.6.1
