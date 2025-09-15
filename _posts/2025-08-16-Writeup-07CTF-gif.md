@@ -210,6 +210,8 @@ if __name__ == "__main__":
 
 4. using per frame local color table i created a image of 16x16 pixels (256 colors) and filled each pixel with the color from the local color table using this script
 
+
+
 ```python
 import re
 import os
@@ -293,6 +295,10 @@ if __name__ == "__main__":
     if all_lcts:
         visualize_lcts(all_lcts)
 ```
+
+
+
+
 **Explanation of visualization code**
 - **parse_log_file(log_path)** - this function reads the log file using regex "Values: (...)" , then converts each block of RGB to a list of tuples and retunrs it
 - **visualize_lcts(palettes)** - this function first makes a directory to store images , then loops through all the palettes with 256 colors , then for each palette it creates a blank image then fills it 16x16 grid with each color from the palette and saves it as char_000.png , char_001.png etc\
@@ -301,7 +307,10 @@ if __name__ == "__main__":
 5. after running the script we got the flag 
 
 
+
 ![flag_characters1](https://raw.githubusercontent.com/E-HAX/writeups/refs/heads/main/2025/07ctf/forensics/colorfulgif/flag.png)
+
+
 
 (i spent around 4-5 hours on this , it was really fun and i used my full brain 🧠 )
 
