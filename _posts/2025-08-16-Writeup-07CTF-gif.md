@@ -112,6 +112,8 @@ colors = read_global_color_table('colorful.gif')
 - **read_global_color_table(file_path)** - this function reads the gif file and extracts the global color table if it exists and writes it to gct.txt
 
 - now extracting the local color table
+
+
 ```python
 def format_palette_bytes(palette_bytes):
     if not palette_bytes:
@@ -196,6 +198,9 @@ if __name__ == "__main__":
     log_filename = "LCT.txt"
     find_all_lcts(gif_filename, log_filename)
 ```
+
+
+
 **Explanation of LCT code**
 - **format_palette_bytes(palette_bytes)** - this function takes a flat list of palette bytes and formats them into a readable list of (R, G, B) tuples
 - **skip_data_sub_blocks(file_handle)** - this function skips over GIF data sub-blocks
