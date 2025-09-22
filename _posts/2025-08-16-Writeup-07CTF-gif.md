@@ -1,6 +1,6 @@
 ---
 title: 07 CTF colorful gif writeup
-date: 2025-08-16 12:00:00 +/-TTTT
+date: 2025-09-16 12:00:00 +/-TTTT
 tags: [07ctf]     # TAG names should always be lowercase
 author: stapat
 ---
