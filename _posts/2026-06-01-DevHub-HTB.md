@@ -1,6 +1,6 @@
 ---
 title: DevHub HackTheBox Season11 
-date: 2026-06-01 12:00:00 +/-TTTT
+date: 2026-05-31 12:00:00 +/-TTTT
 tags: [hackthebox]     # TAG names should always be lowercase
 author: stapat
 ---
