@@ -24,6 +24,8 @@ nmap -sC -sV -T4 management.htb
 The web attack surface included OpenAM. An OpenAM remote-code-execution
 CVE-2026-33439 was used to obtain a low-privileged shell. The initial shell was reported as `openam`;.
 
+[GHSA LINK](https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-wg5r-wc3x-39vc)
+
 [poc link](https://github.com/stapat1245/CVE-2026-33439_poc.git)
 
 
